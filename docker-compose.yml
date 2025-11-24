@@ -6,15 +6,15 @@ services:
     networks:
       - labnet
 
-service_b:
-  image: ghcr.io/nasir-ahmadz/cicd2_lab6b/service_b:latest
-  env_file: ./.env
-  depends_on:
-    - service_a
-  ports:
-    - "8002:8000"
-  networks:
-    - labnet
+  service_b:
+    image: ghcr.io/nasir-ahmadz/cicd2_lab6b/service_b:latest
+    env_file: ./.env
+    depends_on:
+      - service_a
+    ports:
+      - "8002:8000"
+    networks:
+      - labnet
 
 networks:
   labnet:
